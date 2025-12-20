@@ -883,6 +883,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  forwardVector: {x: 0, y: 0, z: 1}
+  rightVector: {x: 1, y: 0, z: 0}
 --- !u!114 &786412251
 MonoBehaviour:
   m_ObjectHideFlags: 0

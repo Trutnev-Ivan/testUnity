@@ -49,7 +49,7 @@ public class RotationPlayerController : MonoBehaviour
     {
         Vector3 viewportPos = camera.ScreenToViewportPoint(mousePosition);
         Vector3 rotationVector = camera.ViewportToWorldPoint(
-            new Vector3(viewportPos.x, viewportPos.y, transform.position.z)
+            new Vector3(viewportPos.x, viewportPos.y, 10)
         );
         
         rotationVector.y = transform.position.y;

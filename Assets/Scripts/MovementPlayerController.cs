@@ -4,6 +4,8 @@ using UnityEngine;
 public class MovementPlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
+    [SerializeField] private Vector3 forwardVector;
+    [SerializeField] private Vector3 rightVector;
     private CharacterController characterController;
 
     private short verticalDirection;
@@ -37,14 +39,14 @@ public class MovementPlayerController : MonoBehaviour
         Vector3 moveVector = Vector3.zero;
 
         if (horizontalDirection > 0)
-            moveVector += transform.right;
+            moveVector += rightVector;
         else if (horizontalDirection < 0)
-            moveVector += -transform.right;
+            moveVector += -rightVector;
 
         if (verticalDirection > 0)
-            moveVector += transform.forward;
+            moveVector += forwardVector;
         else if (verticalDirection < 0)
-            moveVector += -transform.forward;
+            moveVector += -forwardVector;
 
         return moveVector;
     }
