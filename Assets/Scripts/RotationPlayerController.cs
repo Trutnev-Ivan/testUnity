@@ -4,20 +4,20 @@ using UnityEngine;
 public class RotationPlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5;
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera _camera;
     
     private Vector3 mousePosition;
     
     void Start()
     {
-        TryGetComponent<Camera>(out camera);
+        TryGetComponent<Camera>(out _camera);
 
-        if (camera == null)
+        if (_camera == null)
         {
             Debug.Log("Using main camera");
-            camera = Camera.main;
+            _camera = Camera.main;
 
-            if (camera == null)
+            if (_camera == null)
             {
                 throw new Exception("Camera not found");   
             }
@@ -47,8 +47,8 @@ public class RotationPlayerController : MonoBehaviour
 
     private Vector3 GetToRotationVector()
     {
-        Vector3 viewportPos = camera.ScreenToViewportPoint(mousePosition);
-        Vector3 rotationVector = camera.ViewportToWorldPoint(
+        Vector3 viewportPos = _camera.ScreenToViewportPoint(mousePosition);
+        Vector3 rotationVector = _camera.ViewportToWorldPoint(
             new Vector3(viewportPos.x, viewportPos.y, 10)
         );
         
