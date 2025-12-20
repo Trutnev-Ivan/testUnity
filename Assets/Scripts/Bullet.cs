@@ -33,6 +33,11 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         die();
+
+        if (other.TryGetComponent<Trigger>(out Trigger tmp))
+        {
+            Debug.Log("<color=green>Попадание!</color>");
+        }
     }
 
     private void die()
