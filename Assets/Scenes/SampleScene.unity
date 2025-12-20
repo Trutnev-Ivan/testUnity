@@ -820,6 +820,7 @@ GameObject:
   - component: {fileID: 786412249}
   - component: {fileID: 786412248}
   - component: {fileID: 786412250}
+  - component: {fileID: 786412251}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -882,6 +883,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &786412251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786412247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bd82530b41a7b49bdde284f6367418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 800
+  camera: {fileID: 330585545}
 --- !u!1 &927698991
 GameObject:
   m_ObjectHideFlags: 0
