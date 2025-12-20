@@ -36,6 +36,7 @@ public class Bullet : MonoBehaviour
 
         if (other.TryGetComponent<Trigger>(out Trigger tmp))
         {
+            Statistics.incrementScore();
             Debug.Log("<color=green>Попадание!</color>");
         }
     }
